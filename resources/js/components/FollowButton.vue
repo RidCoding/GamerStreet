@@ -24,7 +24,7 @@
                     .then(response => {
                         this.status = ! this.status;
 
-                        console.log(response.data);
+                        window.location.reload();
                     })
                     .catch(errors => {
                         if (errors.response.status == 401) {

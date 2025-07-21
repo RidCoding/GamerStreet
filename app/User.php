@@ -18,7 +18,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'username', 'password',
+        'name',
+        'email',
+        'username',
+        'password',
     ];
 
     /**
@@ -27,7 +30,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     /**
@@ -47,6 +51,14 @@ class User extends Authenticatable
             $user->profile()->create([
                 'title' => $user->username,
             ]);
+            $achievements = Achievement::all('id');
+
+            foreach ($achievements as $achievement) {
+                $user->userAchievement()->create([
+                    'user_id' => $user->id,
+                    'achievement_id' => $achievement->id,
+                ]);
+            }
 
             Mail::to($user->email)->send(new NewUserWelcomeMail());
         });
@@ -65,5 +77,9 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne(Profile::class);
+    }
+    public function userAchievement()
+    {
+        return $this->hasMany(UserAchievement::class, 'user_id', 'id');
     }
 }

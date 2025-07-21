@@ -1,9 +1,9 @@
 @component('mail::message')
-# Welcome to freeCodeGram
+# Welcome to Gamer Street Brudda
 
 This is a community of fellow developers and we love that you have joined us.
 
 
-All the best,<br>
-Victor
+Keep gaming,<br>
+Red
 @endcomponent
