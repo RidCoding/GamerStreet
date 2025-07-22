@@ -60,7 +60,7 @@ class User extends Authenticatable
                 ]);
             }
 
-            Mail::to($user->email)->send(new NewUserWelcomeMail());
+            // Mail::to($user->email)->send(new NewUserWelcomeMail());
         });
     }
 
