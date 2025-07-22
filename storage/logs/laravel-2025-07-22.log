@@ -1,0 +1,311 @@
+[2025-07-22 17:32:50] local.ERROR: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ (SQL: insert into `telescope_entries` (`batch_id`, `content`, `created_at`, `family_hash`, `type`, `uuid`) values (9f73ff83-bb4e-4be2-a3f0-8a4bd7db778f, {"command":"storage:link","exit_code":0,"arguments":{"command":"storage:link"},"options":{"help":false,"quiet":false,"verbose":false,"version":false,"ansi":false,"no-ansi":false,"no-interaction":false,"env":null},"hostname":"LAPTOP-RI08804K"}, 2025-07-22 17:32:48, ?, command, 9f73ff83-b4e3-44b4-baf6-a90c7f20eccd)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+ (SQL: insert into `telescope_entries` (`batch_id`, `content`, `created_at`, `family_hash`, `type`, `uuid`) values (9f73ff83-bb4e-4be2-a3f0-8a4bd7db778f, {\"command\":\"storage:link\",\"exit_code\":0,\"arguments\":{\"command\":\"storage:link\"},\"options\":{\"help\":false,\"quiet\":false,\"verbose\":false,\"version\":false,\"ansi\":false,\"no-ansi\":false,\"no-interaction\":false,\"env\":null},\"hostname\":\"LAPTOP-RI08804K\"}, 2025-07-22 17:32:48, ?, command, 9f73ff83-b4e3-44b4-baf6-a90c7f20eccd)) at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:669)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('insert into `te...', Array, Object(Closure))
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(416): Illuminate\\Database\\Connection->statement('insert into `te...', Array)
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2661): Illuminate\\Database\\Connection->insert('insert into `te...', Array)
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(148): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(149): Illuminate\\Support\\Collection->each(Object(Closure))
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Telescope.php(568): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(44): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#10 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1069): Illuminate\\Container\\Container->call(Object(Closure))
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(158): Illuminate\\Foundation\\Application->terminate()
+#16 C:\\laragon\\www\\gamer_streetv2\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 0)
+#17 {main}
+
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+ at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(924): call_user_func(Object(Closure))
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(457): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('insert into `te...', Array)
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(464): Illuminate\\Database\\Connection->run('insert into `te...', Array, Object(Closure))
+#10 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(416): Illuminate\\Database\\Connection->statement('insert into `te...', Array)
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2661): Illuminate\\Database\\Connection->insert('insert into `te...', Array)
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(148): Illuminate\\Database\\Query\\Builder->insert(Array)
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(149): Illuminate\\Support\\Collection->each(Object(Closure))
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Telescope.php(568): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#16 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(44): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#17 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#18 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#20 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#21 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#22 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1069): Illuminate\\Container\\Container->call(Object(Closure))
+#23 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(158): Illuminate\\Foundation\\Application->terminate()
+#24 C:\\laragon\\www\\gamer_streetv2\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 0)
+#25 {main}
+"} 
+[2025-07-22 17:38:07] local.ERROR: View path not found. {"exception":"[object] (RuntimeException(code: 0): View path not found. at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ViewClearCommand.php:57)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewClearCommand->handle()
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(134): Illuminate\\Container\\Container->call(Array)
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(56): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('view:clear', Array, Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\OptimizeClearCommand.php(30): Illuminate\\Console\\Command->call('view:clear')
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Console\\OptimizeClearCommand->handle()
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(134): Illuminate\\Container\\Container->call(Array)
+#17 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(1021): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(275): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeClearCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\laragon\\www\\gamer_streetv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2025-07-22 17:38:09] local.ERROR: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ (SQL: select count(*) as aggregate from `telescope_entries` where `type` = exception and `family_hash` = 288920dff10cb23eaff565e6905a3efa) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+ (SQL: select count(*) as aggregate from `telescope_entries` where `type` = exception and `family_hash` = 288920dff10cb23eaff565e6905a3efa) at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:669)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(338): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2159): Illuminate\\Database\\Connection->select('select count(*)...', Array, true)
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2147): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2619): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2148): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2546): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2474): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(122): Illuminate\\Database\\Query\\Builder->count()
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(164): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->countExceptionOccurences(Object(Laravel\\Telescope\\IncomingExceptionEntry))
+#10 [internal function]: Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Laravel\\Telescope\\IncomingExceptionEntry), 0)
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(638): array_map(Object(Closure), Array, Array)
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(177): Illuminate\\Support\\Collection->map(Object(Closure))
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(178): Illuminate\\Support\\Collection->each(Object(Closure))
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(139): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->storeExceptions(Object(Illuminate\\Support\\Collection))
+#16 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Telescope.php(568): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#17 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(44): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#18 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#19 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#22 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#23 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1069): Illuminate\\Container\\Container->call(Object(Closure))
+#24 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(158): Illuminate\\Foundation\\Application->terminate()
+#25 C:\\laragon\\www\\gamer_streetv2\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 1)
+#26 {main}
+
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+ at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(924): call_user_func(Object(Closure))
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(959): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(404): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(330): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select count(*)...', Array)
+#10 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(338): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2159): Illuminate\\Database\\Connection->select('select count(*)...', Array, true)
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2147): Illuminate\\Database\\Query\\Builder->runSelect()
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2619): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2148): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#16 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2546): Illuminate\\Database\\Query\\Builder->get(Array)
+#17 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2474): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#18 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(122): Illuminate\\Database\\Query\\Builder->count()
+#19 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(164): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->countExceptionOccurences(Object(Laravel\\Telescope\\IncomingExceptionEntry))
+#20 [internal function]: Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Laravel\\Telescope\\IncomingExceptionEntry), 0)
+#21 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(638): array_map(Object(Closure), Array, Array)
+#22 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(177): Illuminate\\Support\\Collection->map(Object(Closure))
+#23 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#24 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(178): Illuminate\\Support\\Collection->each(Object(Closure))
+#25 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(139): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->storeExceptions(Object(Illuminate\\Support\\Collection))
+#26 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Telescope.php(568): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#27 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(44): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#28 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#29 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#31 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#32 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#33 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1069): Illuminate\\Container\\Container->call(Object(Closure))
+#34 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(158): Illuminate\\Foundation\\Application->terminate()
+#35 C:\\laragon\\www\\gamer_streetv2\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 1)
+#36 {main}
+"} 
+[2025-07-22 17:45:58] local.ERROR: View path not found. {"exception":"[object] (RuntimeException(code: 0): View path not found. at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ViewClearCommand.php:57)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewClearCommand->handle()
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(134): Illuminate\\Container\\Container->call(Array)
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(56): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('view:clear', Array, Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\OptimizeClearCommand.php(30): Illuminate\\Console\\Command->call('view:clear')
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Console\\OptimizeClearCommand->handle()
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(134): Illuminate\\Container\\Container->call(Array)
+#17 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(1021): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(275): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\OptimizeClearCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\laragon\\www\\gamer_streetv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2025-07-22 17:46:00] local.ERROR: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ (SQL: select count(*) as aggregate from `telescope_entries` where `type` = exception and `family_hash` = 288920dff10cb23eaff565e6905a3efa) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+ (SQL: select count(*) as aggregate from `telescope_entries` where `type` = exception and `family_hash` = 288920dff10cb23eaff565e6905a3efa) at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:669)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(338): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2159): Illuminate\\Database\\Connection->select('select count(*)...', Array, true)
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2147): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2619): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2148): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2546): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2474): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(122): Illuminate\\Database\\Query\\Builder->count()
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(164): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->countExceptionOccurences(Object(Laravel\\Telescope\\IncomingExceptionEntry))
+#10 [internal function]: Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Laravel\\Telescope\\IncomingExceptionEntry), 0)
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(638): array_map(Object(Closure), Array, Array)
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(177): Illuminate\\Support\\Collection->map(Object(Closure))
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(178): Illuminate\\Support\\Collection->each(Object(Closure))
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(139): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->storeExceptions(Object(Illuminate\\Support\\Collection))
+#16 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Telescope.php(568): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#17 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(44): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#18 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#19 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#22 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#23 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1069): Illuminate\\Container\\Container->call(Object(Closure))
+#24 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(158): Illuminate\\Foundation\\Application->terminate()
+#25 C:\\laragon\\www\\gamer_streetv2\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 1)
+#26 {main}
+
+[previous exception] [object] (PDOException(code: 2002): SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+ at C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(924): call_user_func(Object(Closure))
+#6 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(959): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(404): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(330): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select count(*)...', Array)
+#10 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#11 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(338): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#12 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2159): Illuminate\\Database\\Connection->select('select count(*)...', Array, true)
+#13 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2147): Illuminate\\Database\\Query\\Builder->runSelect()
+#14 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2619): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#15 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2148): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#16 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2546): Illuminate\\Database\\Query\\Builder->get(Array)
+#17 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2474): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#18 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(122): Illuminate\\Database\\Query\\Builder->count()
+#19 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(164): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->countExceptionOccurences(Object(Laravel\\Telescope\\IncomingExceptionEntry))
+#20 [internal function]: Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Laravel\\Telescope\\IncomingExceptionEntry), 0)
+#21 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(638): array_map(Object(Closure), Array, Array)
+#22 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(177): Illuminate\\Support\\Collection->map(Object(Closure))
+#23 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\EnumeratesValues.php(176): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#24 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(178): Illuminate\\Support\\Collection->each(Object(Closure))
+#25 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(139): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->storeExceptions(Object(Illuminate\\Support\\Collection))
+#26 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\Telescope.php(568): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#27 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(44): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#28 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#29 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#31 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#32 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#33 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1069): Illuminate\\Container\\Container->call(Object(Closure))
+#34 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(158): Illuminate\\Foundation\\Application->terminate()
+#35 C:\\laragon\\www\\gamer_streetv2\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 1)
+#36 {main}
+"} 
+[2025-07-22 19:44:50] local.ERROR: There are no commands defined in the "routes" namespace.
+
+Did you mean this?
+    route {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"routes\" namespace.
+
+Did you mean this?
+    route at C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php:606)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(659): Symfony\\Component\\Console\\Application->findNamespace('routes')
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(237): Symfony\\Component\\Console\\Application->find('routes:list')
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\laragon\\www\\gamer_streetv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2025-07-22 19:45:58] local.ERROR: There are no commands defined in the "routes" namespace.
+
+Did you mean this?
+    route {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"routes\" namespace.
+
+Did you mean this?
+    route at C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php:606)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(659): Symfony\\Component\\Console\\Application->findNamespace('routes')
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(237): Symfony\\Component\\Console\\Application->find('routes:list')
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\laragon\\www\\gamer_streetv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2025-07-22 19:46:03] local.ERROR: There are no commands defined in the "routes" namespace.
+
+Did you mean this?
+    route {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"routes\" namespace.
+
+Did you mean this?
+    route at C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php:606)
+[stacktrace]
+#0 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(659): Symfony\\Component\\Console\\Application->findNamespace('routes')
+#1 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(237): Symfony\\Component\\Console\\Application->find('routes:list')
+#2 C:\\laragon\\www\\gamer_streetv2\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\laragon\\www\\gamer_streetv2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\laragon\\www\\gamer_streetv2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 

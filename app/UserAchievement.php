@@ -47,7 +47,7 @@ class UserAchievement extends Model
                 ->first();
 
 
-            if ($userAchievement->progress < $userPost) {
+            if (!empty($userAchievement->progress) && $userAchievement->progress < $userPost) {
                 $progress = $userPost > $achievement->requirement ? $achievement->requirement : $userPost;
                 self::updateProgress($userAchievement->id, $progress, $achievement);
 

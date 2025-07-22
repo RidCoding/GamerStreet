@@ -29,27 +29,6 @@ class AchievementSeeder extends Seeder
                 'type' => 'post',
                 'requirement' => 10,
             ],
-            // [
-            //     'name' => 'First Follow',
-            //     'description' => 'Followed your first Gamer',
-            //     'icon' => 'icons/follow1.png',
-            //     'type' => 'follow',
-            //     'requirement' => 1,
-            // ],
-            // [
-            //     'name' => 'Friendly Fella',
-            //     'description' => 'Followed 5 Gamers!',
-            //     'icon' => 'icons/follow5.png',
-            //     'type' => 'follow',
-            //     'requirement' => 5,
-            // ],
-            // [
-            //     'name' => 'Popular Kid',
-            //     'description' => 'Gained 10 followers!',
-            //     'icon' => 'icons/followers10.png',
-            //     'type' => 'follower',
-            //     'requirement' => 10,
-            // ],
         ];
 
         foreach ($achievements as $data) {
