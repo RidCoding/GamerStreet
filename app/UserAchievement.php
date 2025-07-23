@@ -46,11 +46,12 @@ class UserAchievement extends Model
                 ->whereNull('unlocked_at')
                 ->first();
 
+            if($userAchievement){
+                if ($userAchievement->progress < $userPost) {
+                    $progress = $userPost > $achievement->requirement ? $achievement->requirement : $userPost;
+                    self::updateProgress($userAchievement->id, $progress, $achievement);
 
-            if (!empty($userAchievement->progress) && $userAchievement->progress < $userPost) {
-                $progress = $userPost > $achievement->requirement ? $achievement->requirement : $userPost;
-                self::updateProgress($userAchievement->id, $progress, $achievement);
-
+                }
             }
         }
 
